@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2>Dashboard.</h2>
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#applications">Applications</a>
+                <a href="#apply">New Application</a>
+                <a href="#resources">Resources</a>
+            </nav>
+            <label><input type="checkbox" id="theme"> Dark theme</label>
+        </aside>
+
+        <main id="dashboard">
+            <header>
+                <div>
+                    <p>WORKSPACE / DASHBOARD</p>
+                    <h1>Your next chapter starts here.</h1>
+                </div>
+                <a class="button" href="#apply">+ New application</a>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <p class="eyebrow">YOUR CAREER JOURNEY</p>
+                    <h2>Small steps.<br>Big opportunities.</h2>
+                    <p>Organize applications and track your progress.</p>
+                </div>
+                <div class="visual">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOVPxevJtMG_KtQZna57i_0EcepguMnh4the3LGZbcQ&s">
+                    <span class="note">Your future is in progress</span>
+                    <span class="vertical-label">CAREER PATH</span>
+                </div>
+            </section>
+
+            <section class="stats">
+                <article class="card"><p>Applications</p><strong>12</strong></article>
+                <article class="card"><p>In review</p><strong>05</strong></article>
+                <article class="card"><p>Interviews</p><strong>02</strong></article>
+                <article class="card"><p>Offers</p><strong>01</strong></article>
+            </section>
+
+            <div class="columns">
+                <section class="panel" id="applications">
+                    <h2>Recent applications</h2>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Role</th><th>Company</th><th>Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Frontend Intern</td><td>Northstar</td><td><span class="status review">Review</span></td></tr>
+                                <tr><td>Web Developer</td><td>Paperplane</td><td><span class="status interview">Interview</span></td></tr>
+                                <tr><td>React Intern</td><td>Goodwell</td><td><span class="status pending">Pending</span></td></tr>
+                                <tr><td>UI Developer</td><td>Studio Form</td><td><span class="status offer">Offer</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="panel progress-panel">
+                    <h2>Profile strength</h2>
+                    <div class="progress"><div></div></div>
+                    <p>75% complete</p>
+                    <ol class="steps">
+                        <li>Personal information</li>
+                        <li>Skills and education</li>
+                        <li>Projects and portfolio</li>
+                        <li>Resume upload</li>
+                    </ol>
+                </section>
+            </div>
+
+            <div class="columns lower">
+                <section class="panel" id="apply">
+                    <h2>New application</h2>
+                    <form action="#" method="get">
+                        <div class="form-grid">
+                            <label>Full name
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </label>
+                            <label>Email
+                                <input type="email" name="email" placeholder="name@gmail.com" required>
+                            </label>
+                            <label>Company
+                                <input type="text" name="company" placeholder="Company name" required>
+                            </label>
+                            <label>Position
+                                <select name="role" required>
+                                    <option value="">Choose a role</option>
+                                    <option>Frontend Intern</option>
+                                    <option>Web Developer</option>
+                                    <option>React Intern</option>
+                                </select>
+                            </label>
+                            <label class="full">Job posting URL
+                                <input type="url" name="link" placeholder="enter url">
+                            </label>
+                        </div>
+                        <button class="button" type="submit">Save application</button>
+                    </form>
+                </section>
+
+                <section class="panel">
+                    <h2>Career tips</h2>
+                    <div class="tips">
+                        <article><h3>Improve your resume</h3><p>Highlight relevant skills and projects.</p></article>
+                        <article><h3>Prepare for interviews</h3><p>Practice concepts and explain your work.</p></article>
+                        <article><h3>Follow up</h3><p>Track dates and check your email.</p></article>
+                    </div>
+                </section>
+            </div>
+
+            <section class="panel resources" id="resources">
+                <h2>Build your career toolkit</h2>
+                <div class="resource-text">
+                    <h3 class="column-heading">Before you apply</h3>
+                    <p>Keep your resume clear and relevant. Highlight your education, skills, and projects.</p>
+                    <p>Practice interview questions and explain how you solve problems. Keep your portfolio links working.</p>
+                    <p>Track application dates and use feedback to improve your next application.</p>
+                </div>
+                <a href="resume.pdf">View resume PDF</a>
+            </section>
+
+            <footer>Dashboard. Apply Now.</footer>
+        </main>
+    </div>
+
+    <script>
+        const theme = document.querySelector("#theme");
+
+        theme.addEventListener("change", () => {
+            document.body.classList.toggle("dark", theme.checked);
+        });
+    </script>
+</body>
+</html>
